@@ -1,0 +1,133 @@
+.container {
+  width: var(--container);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid transparent;
+  background: rgba(245, 245, 243, 0.72);
+  backdrop-filter: blur(10px);
+  transition: background var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.site-header.scrolled {
+  background: rgba(245, 245, 243, 0.9);
+  border-color: var(--color-border);
+  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.06);
+}
+
+.header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+  gap: 1rem;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hero {
+  padding: clamp(5rem, 9vw, 8rem) 0 4rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+.hero-copy {
+  max-width: 760px;
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: 0.98;
+}
+
+.lead {
+  max-width: 620px;
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--color-muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-frame {
+  position: relative;
+  width: min(100%, 360px);
+  padding: 0.85rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.profile-frame::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 1.1rem;
+  pointer-events: none;
+}
+
+.profile-frame img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 1rem;
+  display: block;
+}
+
+.section {
+  padding: clamp(4rem, 7vw, 6rem) 0;
+}
+
+.content-grid,
+.contact-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.skill-grid,
+.project-grid,
+.achievement-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.site-footer {
+  padding: 1.5rem 0 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--color-muted);
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio website for a software developer and student showcasing projects, skills, education, and contact details."
+    />
+    <title>Jebron Ortula | Portfolio</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animation.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-logo" href="#home" aria-label="Go to the home section">J</a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Open navigation menu"
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+          <span class="menu-toggle__label">Menu</span>
+        </button>
+
+        <nav id="primary-navigation" class="navigation" aria-label="Primary navigation">
+          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#education">Education</a>
+          <a class="nav-link" href="#achievements">Achievements</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero section reveal">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Student Developer</p>
+            <h1>Building thoughtful digital experiences with code.</h1>
+            <p class="lead">
+              I’m Jebron Ortula, a computer science student focused on front-end engineering,
+              accessible design, and practical problem-solving.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">View Projects</a>
+              <a class="button button-secondary" href="#contact">Contact Me</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Portrait of Jebron Ortula">
+            <div class="profile-frame">
+              <img src="assets/icons/-oKeAvII.jpg" alt="Jebron Ortula portrait" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">About</p>
+            <h2>Driven by curiosity and clean execution.</h2>
+          </div>
+          <div class="content-grid">
+            <p>
+              I am a motivated student developer who enjoys turning complex ideas into simple,
+              accessible experiences. My work blends technical problem-solving with visual design,
+              helping me create products that are both functional and easy to use.
+            </p>
+            <p>
+              Through coursework, personal projects, and internships, I have developed a strong
+              foundation in web development, user experience, and collaborative teamwork.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section reveal">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Skills</p>
+            <h2>Core tools and capabilities.</h2>
+          </div>
+
+          <div class="card-grid skill-grid">
+            <article class="info-card">
+              <h3>Frontend</h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <h3>Design</h3>
+              <ul>
+                <li>UI Principles</li>
+                <li>Accessibility</li>
+                <li>Wireframing</li>
+                <li>Brand Consistency</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <h3>Development</h3>
+              <ul>
+                <li>Git & GitHub</li>
+                <li>Debugging</li>
+                <li>API Integration</li>
+                <li>Problem Solving</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Projects</p>
+            <h2>Selected work and ideas in motion.</h2>
+          </div>
+
+          <div class="card-grid project-grid">
+            <article class="project-card">
+              <span class="project-tag">Website</span>
+              <h3>VERIS - Website</h3>
+              <p>
+                A SAAS platform website with a clean, modern design, responsive layout, and interactive elements to showcase the product's features and benefits.
+              </p>
+              <a href="#" aria-label="View the VERIS - Website project">View project</a>
+            </article>
+
+            <article class="project-card">
+              <span class="project-tag">Web App</span>
+              <h3>Organization Auditing App</h3>
+              <p>
+                A web application designed to streamline the auditing process for organizations, featuring user-friendly interfaces, data visualization, and secure access controls.
+              </p>
+              <a href="#" aria-label="View the Organization Auditing App project">View project</a>
+            </article>
+
+            <article class="project-card">
+              <span class="project-tag">Mobile App</span>
+              <h3>MedMapper</h3>
+              <p>
+                A mobile application that helps users locate nearby medical facilities, providing essential information and navigation features for improved healthcare access.
+              </p>
+              <a href="#" aria-label="View the MedMapper project">View project</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section reveal">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Education</p>
+            <h2>Academic foundation and learning path.</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item">
+              <span class="timeline-date">2024 – Present</span>
+              <div>
+                <h3>BS in Computer Science</h3>
+                <p>Visayas State University</p>
+                <p>Faculty of Computing</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-date">2022 – 2024</span>
+              <div>
+                <h3>STEM - Senior High School</h3>
+                <p>Western Leyte College</p>
+                <p>High School Department</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="achievements" class="section reveal">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Achievements</p>
+            <h2>Recognition and milestones.</h2>
+          </div>
+
+          <div class="card-grid achievement-grid">
+            <article class="info-card">
+              <h3>DOST Undergraduate Scholar</h3>
+              <p>Received recognition for academic excellence and potential in computer science.</p>
+            </article>
+            <article class="info-card">
+              <h3>Frontend Developer - VERIS Team</h3>
+              <p>Part of the VERIS development team. Dedicated in creating solutions for real-world problems.</p>
+            </article>
+            <article class="info-card">
+              <h3>Volunteer Mentor</h3>
+              <p>Supported first-year students learning basic programming concepts.</p>
+            </article>
+            <article class="info-card">
+              <h3>DataCamp X STAR-DOST Scholar</h3>
+              <p>Recognized for outstanding performance in data science and analytics.</p>
+            </article>
+            <article class="info-card">
+              <h3>Finalist Datathon</h3>
+              <p>Created a solution for a real-world problem using data analysis and machine learning techniques.</p>
+            </article>
+            <article class="info-card">
+              <h3>President of CS3</h3>
+              <p>Led initiatives to promote student engagement and academic excellence in the Computer Science department.</p>
+            </article>
+            
+          </div>
+        </div>
+      </section>
+
+      <section id="ai-declaration" class="section reveal">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">AI Declaration</p>
+            <h2>Transparency statement.</h2>
+          </div>
+
+          <div class="info-card">
+            <p>
+              AI tools were used in the development of this portfolio to assist with idea generation,
+              wording refinement, and layout suggestions. This declaration is included to maintain
+              transparency and academic integrity.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal">
+        <div class="container contact-wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s build something useful.</h2>
+          </div>
+
+          <div class="contact-panel">
+            <p>
+              I am available for internships, freelance work, and collaborative product ideas.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <a href="mailto:ortulajebron2005@gmail.com" aria-label="Email Jebron Ortula">
+                  <img class="social-icon" src="assets/icons/envelope-regular(1).png" alt="Email icon" />
+                  <span>Gmail</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Jebzzzzz" target="_blank" rel="noreferrer" aria-label="Visit GitHub profile">
+                  <img class="social-icon" src="assets/icons/github-brands-solid.png" alt="GitHub icon" />
+                  <span>GitHub</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/jebron-ortula-b46076400/" target="_blank" rel="noreferrer" aria-label="Visit LinkedIn profile">
+                  <img class="social-icon" src="assets/icons/square-linkedin-brands-solid.png" alt="LinkedIn icon" />
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Jebron Ortula</p>
+        <a href="#home">Back to top</a>
+      </div>
+    </footer>
+  </body>
+</html>
+
