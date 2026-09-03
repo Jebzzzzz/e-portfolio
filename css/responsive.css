@@ -36,9 +36,15 @@
   .skill-grid,
   .project-grid,
   .achievement-grid,
+  .certification-grid,
   .content-grid,
   .contact-wrap {
     grid-template-columns: 1fr;
+  }
+
+  .certificate-card,
+  .certificate-card--featured {
+    grid-column: auto;
   }
 
   .timeline-item {
@@ -124,6 +130,15 @@
 
   .contact-list a {
     width: 100%;
+  }
+
+  .certificate-copy {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .certificate-meta {
+    text-align: left;
   }
 
   .footer-inner {
