@@ -8,15 +8,15 @@
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid transparent;
-  background: rgba(245, 245, 243, 0.72);
+  background: var(--color-surface);
   backdrop-filter: blur(10px);
   transition: background var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .site-header.scrolled {
-  background: rgba(245, 245, 243, 0.9);
+  background: var(--color-surface-scrolled);
   border-color: var(--color-border);
-  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.06);
+  box-shadow: var(--shadow-header);
 }
 
 .header-inner {
@@ -32,6 +32,12 @@
   display: flex;
   align-items: center;
   gap: 0.35rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
 }
 
 .hero {
@@ -79,7 +85,7 @@
   position: relative;
   width: min(100%, 360px);
   padding: 0.85rem;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--color-profile-frame);
   border: 1px solid var(--color-border);
   border-radius: 1.5rem;
   box-shadow: var(--shadow-soft);
@@ -89,7 +95,7 @@
   content: "";
   position: absolute;
   inset: 1rem;
-  border: 1px solid rgba(17, 17, 17, 0.08);
+  border: 1px solid var(--color-inset-line);
   border-radius: 1.1rem;
   pointer-events: none;
 }

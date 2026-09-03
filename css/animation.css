@@ -9,6 +9,32 @@
   transform: translateY(0);
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 2;
+}
+
+:root.theme-transitioning::view-transition-new(root) {
+  clip-path: circle(
+    0 at var(--theme-transition-x) var(--theme-transition-y)
+  );
+}
+
+:root.theme-transitioning *,
+:root.theme-transitioning *::before,
+:root.theme-transitioning *::after {
+  transition: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -21,6 +47,8 @@
   }
 
   .button,
+  .theme-toggle,
+  .theme-toggle__icon,
   .nav-link,
   .site-header {
     transition: none;

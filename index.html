@@ -8,12 +8,28 @@
       content="Portfolio website for a software developer and student showcasing projects, skills, education, and contact details."
     />
     <title>Jebron Ortula | Portfolio</title>
+    <script>
+      (() => {
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
+
+        try {
+          const savedTheme = localStorage.getItem('portfolio-theme');
+          document.documentElement.dataset.theme =
+            savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : systemTheme;
+        } catch {
+          document.documentElement.dataset.theme = systemTheme;
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/animation.css" />
+    <script src="js/theme.js" defer></script>
     <script src="js/navigation.js" defer></script>
     <script src="js/animation.js" defer></script>
   </head>
@@ -21,17 +37,6 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="site-logo" href="#home" aria-label="Go to the home section">J</a>
-
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="primary-navigation"
-          aria-label="Open navigation menu"
-        >
-          <span class="menu-toggle__icon" aria-hidden="true"></span>
-          <span class="menu-toggle__label">Menu</span>
-        </button>
 
         <nav id="primary-navigation" class="navigation" aria-label="Primary navigation">
           <a class="nav-link active" href="#home">Home</a>
@@ -42,6 +47,34 @@
           <a class="nav-link" href="#achievements">Achievements</a>
           <a class="nav-link" href="#contact">Contact</a>
         </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Switch color theme">
+            <img
+              class="theme-toggle__icon theme-toggle__icon--moon"
+              src="assets/icons/moon.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <img
+              class="theme-toggle__icon theme-toggle__icon--sun"
+              src="assets/icons/sun.png"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Open navigation menu"
+          >
+            <span class="menu-toggle__icon" aria-hidden="true"></span>
+            <span class="menu-toggle__label">Menu</span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -140,18 +173,21 @@
               <span class="project-tag">Website</span>
               <h3>VERIS - Website</h3>
               <p>
-                A SAAS platform website with a clean, modern design, responsive layout, and interactive elements to showcase the product's features and benefits.
+                Served as one of the frontend developers for the VERIS website, contributing to the design and implementation of user-friendly interfaces and responsive layouts.
               </p>
-              <a href="#" aria-label="View the VERIS - Website project">View project</a>
+              <a href="https://veris-dev.fc-ssc.online/" aria-label="View the VERIS - Website project" target="_blank" rel="noopener noreferrer">View project</a>
             </article>
 
             <article class="project-card">
-              <span class="project-tag">Web App</span>
+              <div class="project-meta">
+                <span class="project-tag">Web App</span>
+                <span class="project-status">Ongoing</span>
+              </div>
               <h3>Organization Auditing App</h3>
               <p>
                 A web application designed to streamline the auditing process for organizations, featuring user-friendly interfaces, data visualization, and secure access controls.
               </p>
-              <a href="#" aria-label="View the Organization Auditing App project">View project</a>
+              <span class="project-link-unavailable">Not published yet</span>
             </article>
 
             <article class="project-card">
@@ -160,7 +196,7 @@
               <p>
                 A mobile application that helps users locate nearby medical facilities, providing essential information and navigation features for improved healthcare access.
               </p>
-              <a href="#" aria-label="View the MedMapper project">View project</a>
+              <a href="https://github.com/pr3cious-belle/MedMapper" aria-label="View the MedMapper project" target="_blank" rel="noopener noreferrer">View project</a>
             </article>
           </div>
         </div>
@@ -231,23 +267,6 @@
         </div>
       </section>
 
-      <section id="ai-declaration" class="section reveal">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">AI Declaration</p>
-            <h2>Transparency statement.</h2>
-          </div>
-
-          <div class="info-card">
-            <p>
-              AI tools were used in the development of this portfolio to assist with idea generation,
-              wording refinement, and layout suggestions. This declaration is included to maintain
-              transparency and academic integrity.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section id="contact" class="section reveal">
         <div class="container contact-wrap">
           <div class="section-heading">
@@ -292,4 +311,3 @@
     </footer>
   </body>
 </html>
-
